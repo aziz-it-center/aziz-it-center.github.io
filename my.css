@@ -1,121 +1,304 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Merienda:wght@400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	text-decoration: none;
-	font-family: 'Merienda';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Poppins';
 }
-.ody {
-	width: 100%;
-	height: 100vh;
+body {
+    /* background: linear-gradient(rgba(11, 45, 20,01), rgba(14, 124, 110.10),rgba(1, 54, 20.1)); */
+    background:rgb(147, 162, 213);
 }
 .container {
-	display: flex;
-	transform: translate(0%, 130%);
-	justify-content: center;
-	align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
 }
-.h5-box {
-	text-align: center;
-	font-size: 30px;
-	width: 100%;
-	background: rgb(13, 59, 105);
-	color: white;
-	border-radius: 10px 10px 50px 50px;
-	padding: 3px 0;
-	letter-spacing: 2px;
+.containeri {
+    max-width: 90%;
+    margin: 0 auto;
 }
-.g {
+nav {
+    width: 100%;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 5;
+    display: block;
+}
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+ul {
+    display: flex;
+    justify-content: center;
+}
+li {
+    margin: 30px;
+}
+li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Poppins' sans-serif;
+    letter-spacing: 2px;
+    color: rgba(145, 144, 144, 0.8);
+}
+.alt-1 {
+    width: 80px;
+}
+.hover {
+	position: relative;	
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.hover::after {
+	content: '';
 	position: absolute;
-	font-family: 'Caveat';
-	font-weight: 700;
-	letter-spacing: 5px;
-	z-index: 1;
 	width: 100%;
-	text-align: center;
-	opacity: 4%;
-	text-shadow: 5px 5px 10px yellow;
-	font-size: 100px;
-	top: 5%;
-	color: white;
+	height: 0.150rem;
+	background-color: #787878;
+    top: 28px;
+	bottom: 0;
+    left: 0;
+}
+.hover::after {
+	transform: scale(0, 1);
+	transition: transform 0.5s ease;
+}
+.hover:hover::after {
+	transform: scale(1, 1);
 }
 h1 {
-	font-size: 70px;
-	line-height: 120px;
-	color: white;
-	padding: 20px 0;
+    padding: 150px 0 100px 0;
+    font-size: 70px;
+    font-family: 'Poppins';
+    text-align: center;
+    color: white;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 5px#5778c1;
 }
-.button {
-	width: 100%;
-	text-align: center;
+.project-box {
+    width: 100%;
+    /* background: red; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    counter-reset: sanash;
 }
-button {
-	cursor: pointer;
-	font-family: Caveat;
-	font-size: 30px;
-	border: none;
-	padding: 7px 7px;
-	background-color: rgba(0, 255, 255, 0.603);
-	border-radius: 10px;
-	margin-bottom: 20px;
-	transition: 1s;
+.transition {
+    transition: .5s;
 }
-.wraper {
-	position: absolute;
-	width: 100%;
-	height: 100%; 
-	overflow: hidden;
+.height {
+    height: 300px;
+    margin: 35px ;
 }
-* {
-  border: none;
-  margin: 0;
+h3  {
+    text-align: center;
+    color: dodgerblue;
+    font-size: 23px;
+    margin-top: 8px;
+    text-transform: capitalize;
 }
-html,
-body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+.pr-img {
+    width: 100%;
+    border-radius: 20px;
+    height: auto;
 }
-body {
-  //background: radial-gradient(#555, #111);
+.projects {
+    width: 400px;
+    padding: 15px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    transition: all .3s;
 }
-canvas {
-  background: white;
-  background: radial-gradient(#FFF, #DDD);
-  //background: radial-gradient(hsl(40, 80%, 60%), hsl(0, 50%, 40%));
-  //filter: blur(3px) contrast(5);
-  //transform: scale(0.1);
-  transform-origin: 0 0;
-  //border: solid .8em green;
-  width: 100%;
-  height: 100%;
+section {
+    background-image: url('../../img/3.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    background-repeat: no-repeat;   
+    background-position: center; 
 }
-.ui {
-  display: none;
-  position: fixed;
-  z-index: 5;
-  bottom: 0;
-  left: 0;
-  width: 120px;
-  padding: 10px;
-  background: rgba(255,255,255,0.7);
+.projects::before {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px 0 20px 0;
+    background-color: rgb(12, 193, 229);
+    counter-increment: sanash;
+    color: white;
+    padding: 1px;
+    content:  counter(sanash);
+    top: 15px;
+    left: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-button:hover {
-	color: white;
-	background-color: transparent;
-	transition: 1s;
-	background-color:  rgba(30, 229, 255, 0.36);
-	text-shadow: 10px 0px 5px black;
+.projects:hover {
+    transition: all .3s;
+    transform: translateY(-40px);
 }
-@media screen and (max-width: 550px) {
-	.ui {
-		/*width: 100%;*/
-	}
+.pagination {
+    width: 100%;
+}  
+.pagination {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.pagination > p {
+    margin: 20px;
+    background-color: transparent;
+    padding: 15px 25px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    /* transition: 5s; */
+}
+.pagination .active {
+    background-color: gray;
+    color: white;
+}
+.pagination p {
+    cursor: pointer;
+}
+.noname {
+    position: absolute;
+    left: 0px;
+    top: 400px;
+    z-index: 9999;
+}
+.name {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+#no-a {
+    width: 50px;
+    background-color: rgb(248, 236, 236);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    align-items: center;
+    transition: .5s;
+}
+h4 {
+    color: transparent;
+}
+.name #no-a:hover {
+    width: 150px;
+    transition: .5s;
+}
+.name #no-a:hover h4 {
+    color: white;
+    transition: 1s;
+}
+.name #no-a:hover .d {
+    transition: 2.7s;color: red;
+}
+.fa-youtube-play, .fa-instagram {
+    transition: 2.7s;color: red;
+}
+.fa-telegram {
+    transition: 2.7s;color: dodgerblue;
+}
+.name #no-a:hover .y {
+    transition: 2.7s;color: dodgerblue;
+}
+.fa-facebook {
+    transition: 2.7s;color: #3b5998;
+}
+.name #no-a:hover .t {
+    transition: 2.7s;color: #3b5998;
+}
+.fa {
+    font-size: 30px !important;
+    margin-right: 10px;
 }
 ::selection {
-	background-color: rgb(82, 82, 247);
-	color: black;
-	border-radius: 20px;
+    background-color: #787878;
+}
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+}
+.hamburger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: none;
+    z-index: 9999;
+}
+@media screen and (max-width: 403px) {
+    .projects {
+        width: 300px;
+        height: 240px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    .db {
+        width: 100%;
+        position: fixed;
+        z-index: 5;   
+    }
+}
+@media screen and (max-width: 875px) {
+    .imgg {
+        display: none;
+    }
+}
+@media screen and (max-width: 797px) {
+    .alt-1 {
+        display: none;
+    }
+    .navbar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 717px) {
+    nav {   
+        width: 50%;
+        background-color: #ffffff92;
+        border-radius: 0 5px 50px 0;
+        transform: translateX(-400px);
+        transition: .3s;
+    }
+    .navbar {
+        width: 100%;
+        background-color: #ffffff92;
+        border-radius: 0 5px 50px 0;
+        transform: translateX(-400px);
+        transition: .3s;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        line-height: 5px;
+        margin: 50px 0;
+    }
+    .hamburger, .close {
+        display: block;
+    }
 }
